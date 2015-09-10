@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>闲的啊啊</title>
+    <title>闲的啊</title>
 </head>
 <body>
 <div>
@@ -39,18 +39,8 @@
     <span id="s_5"></span>
 </div>
 <script type="text/javascript">
-	var	daze = 1;
+	var	daze = 0;
     function getTime(){   	
-    	
-    	
-		var h_5=Math.floor(daze/60/60/24);		
-        var m_5=Math.floor(daze/60%60);
-        var s_5=Math.floor(daze%60);
-		document.getElementById("t_5").innerHTML = "你已在这里发呆：";
-		document.getElementById("h_5").innerHTML = h_5 + "时";
-		document.getElementById("m_5").innerHTML = m_5 + "分";
-		document.getElementById("s_5").innerHTML = s_5 + "秒";
-    	daze=daze+1;
         var NowTime = new Date();		
 		var n = NowTime.getFullYear()+'/'+(NowTime.getMonth()+1)+'/'+NowTime.getDate()+' 17:30:00';
 		var EndTime_1= new Date(n); 
@@ -102,6 +92,9 @@
 			document.getElementById("m_4").innerHTML = m_4 + "分";
 			document.getElementById("s_4").innerHTML = s_4 + "秒";
 		}
+					
+    }
+	function getDaze(){
 		daze=daze+1;
 		var h_5=Math.floor(daze/60/60/24);		
         var m_5=Math.floor(daze/60%60);
@@ -109,9 +102,10 @@
 		document.getElementById("t_5").innerHTML = "你已在这里发呆：";
 		document.getElementById("h_5").innerHTML = h_5 + "时";
 		document.getElementById("m_5").innerHTML = m_5 + "分";
-		document.getElementById("s_5").innerHTML = s_5 + "秒";				
-    }
+		document.getElementById("s_5").innerHTML = s_5 + "秒";	
+	}
     setInterval(getTime,1000);
+	setInterval(getDaze,2000);
     </script>  
 </body>
 </html> 
