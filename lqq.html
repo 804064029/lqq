@@ -38,9 +38,13 @@
     <span id="m_5"></span>
     <span id="s_5"></span>
 </div>
+<div>
+	<span id="r_s"><iframe width="100%" height="20" frameborder="0" marginheight="0" marginwidth="0" src="http://www.shipinkb.com/lqq/player/rs.php"></iframe></span>
+</div>
+
 <script type="text/javascript">
 	var	daze = new Date();
-    function getTime(){   	
+    function getTime(){ 	
         var NowTime = new Date();		
 		var n = NowTime.getFullYear()+'/'+(NowTime.getMonth()+1)+'/'+NowTime.getDate()+' 17:30:00';
 		var EndTime_1= new Date(n); 
@@ -99,8 +103,8 @@
 		document.getElementById("t_5").innerHTML = "你已在这里发呆：";
 		document.getElementById("h_5").innerHTML = h_5 + "时";
 		document.getElementById("m_5").innerHTML = m_5 + "分";
-		document.getElementById("s_5").innerHTML = s_5 + "秒";		
-    }
+		document.getElementById("s_5").innerHTML = s_5 + "秒";	
+    }	
     setInterval(getTime,1000);
     </script>  
 </body>
